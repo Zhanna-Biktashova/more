@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+ul,
+li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6,
+p{
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+body{
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+}
+.container{
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1140px;
+}
+.title{
+  @include f500;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #404149;
+}
