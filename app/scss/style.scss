@@ -161,7 +161,8 @@
 
 // start smart
 
-.smart{
+.smart,
+.job{
   background-color: $red;
   min-height: 181px;
   &__inner{
@@ -223,6 +224,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 30px;
+    padding-bottom: 150px;
   }
   &__item{
     background-color: $grey;
@@ -248,3 +250,289 @@
 }
 
 // end doing
+
+// start portfolio
+
+.portfolio{
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    &-img{
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+  }
+}
+
+// end portfolio
+
+// start question
+
+.question{
+  &__title{
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  &__accordion{
+    margin-bottom: 150px;
+    &-title{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      text-transform: uppercase;
+      color: $red;
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      transition: 0.4s;
+      cursor: pointer;
+      &::before{
+        content: '\f0d7';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        left: 0;
+        transform: rotate(270deg);
+      }
+      &.active::before{
+        content: '\f0d7';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        left: 0;
+        transform: rotate(0deg);
+      }
+    }
+    &-text{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #999;
+      margin-bottom: 40px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+  }
+}
+
+// end question
+
+// start partners 
+
+.partners{
+  background-color: #404149;
+  &__title{
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  &__inner{
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-gap: 30px;
+    &-item{
+      text-align: center;
+    }
+  }
+}
+
+// end partners 
+
+// start reviews 
+
+.reviews{
+  &__title{
+    padding-top: 150px;
+    padding-bottom: 64px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+    padding-bottom: 150px;
+  }
+  &__item{
+    &-text{
+      background: $grey;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      color: #999;
+      padding: 80px 30px 38px 30px;
+      margin-bottom: 30px;
+      position: relative;
+      &::before{
+        content: '\f10d';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 35px;
+        top: 30px;
+      }
+    }
+    &-name{
+      font-size: 21px;
+      line-height: 31px;
+      letter-spacing: 0.02em;
+      @include f500;
+      color: #000;
+      span{
+        color: $red;
+      }
+    }
+  }
+}
+
+// end reviews 
+
+
+// start contact 
+
+.contact{
+  &__title{
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    grid-gap: 30px;
+    padding-bottom: 150px;
+  }
+  &__item{
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #999;
+    @include f500;
+    &-address{
+      position: relative;
+      padding-top: 70px;
+      &::before{
+        content: '\f041';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+      span{
+        display: block;
+        color: #000;
+        padding-top: 25px;
+      }
+    }
+    &-phone{
+      padding-top: 70px;
+      margin-bottom: 25px;
+      position: relative;
+      &::before{
+        content: '\f095';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+    }
+    &-tel{
+      display: block;
+      color: #000;
+    }
+    &-time{
+      padding-top: 70px;
+      position: relative;
+      &::before{
+        content: '\f017';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+      span{
+        display: block;
+        color: #000;
+        padding-top: 25px;
+      }
+    }
+    &-email{
+      padding-top: 70px;
+      position: relative;
+      &::before{
+        content: '\f0e0';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+      a{
+        color: $red;
+        display: block;
+        padding-top: 25px;
+      }
+    }
+  }
+}
+
+// end contact 
+
+// start footer 
+
+.footer{
+  background-color: #404149;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 75px;
+    &-copy{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+      padding-right: 20px;
+    }
+    &-text{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+}
+
+// end footer 
+
