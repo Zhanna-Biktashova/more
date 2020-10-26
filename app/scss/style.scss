@@ -49,12 +49,14 @@
     bottom: 0;
     transform: translateY(50%);
     &-inner{
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      grid-gap: 30px;
       padding: 57px 130px;
     }
     &-item{
-      max-width: 190px;
+      width: 100%;
+      // max-width: 190px;
     }
     &-num{
       @include f500;
@@ -83,6 +85,19 @@
   }
 }
 .menu{
+  &__btn{
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    margin-left: auto;
+    div{
+      background-color: $red;
+      height: 3px;
+      & + div{
+        margin-top: 5px;
+      }
+    }
+  }
   &__list{
     display: inline-block;
     & + .menu__list{
@@ -535,4 +550,11 @@
 }
 
 // end footer 
+
+
+
+
+@import '_media';
+
+
 
