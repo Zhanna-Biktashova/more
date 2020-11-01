@@ -1,0 +1,17 @@
+$red: #F7654A;
+$grey: #F7F7F7;
+
+@mixin f400{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+@mixin f500{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+@mixin f700{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}

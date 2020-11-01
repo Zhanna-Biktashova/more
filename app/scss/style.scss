@@ -1,8 +1,560 @@
-html {
-  box-sizing: border-box;
+@import '_vars';
+@import '_global';
+
+// start header 
+
+.header{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &__inner{
+    padding-top: 30px;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 170px;
+  }
+  &__title{
+    @include f500;
+    max-width: 750px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 64px;
+    line-height: 95px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  &__text{
+    color: #fff;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 170px;
+  }
+  &__bottom{
+    position: absolute;
+    background-color: $grey;
+    min-height: 300px;
+    right: 0;
+    left: 0;
+    max-width: 1140px;
+    margin: 0 auto;
+    bottom: 0;
+    transform: translateY(50%);
+    &-inner{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      grid-gap: 30px;
+      padding: 57px 130px;
+    }
+    &-item{
+      width: 100%;
+      // max-width: 190px;
+    }
+    &-num{
+      @include f500;
+      font-size: 72px;
+      line-height: 107px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $red;
+      span{
+        display: block;
+        font-size: 36px;
+        line-height: 53px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000;
+        @include f500;
+      }
+    }
+    &-text{
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      @include f500;
+      color: #999999;
+    }
+  }
 }
-*,
-*::before,
-*::after{
-  box-sizing: inherit;
+.menu{
+  &__btn{
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    margin-left: auto;
+    div{
+      background-color: $red;
+      height: 3px;
+      & + div{
+        margin-top: 5px;
+      }
+    }
+  }
+  &__list{
+    display: inline-block;
+    & + .menu__list{
+      margin-left: 30px;
+    }
+  }
+  &__link{
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .5s;
+    &:hover{
+      color: $red;
+    }
+  }
 }
+// end header 
+
+// start project 
+
+.project{
+  &__title{
+    margin-top: 250px;
+    margin-bottom: 60px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+    margin-bottom: 150px;
+  }
+  &__item{
+    display: block;
+    &-images{
+      img{
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }  
+    }
+    &-title{
+      font-size: 24px;
+      line-height: 36px;
+      @include f500;
+      color: #404149;
+      position: relative;
+      margin-top: 66px;
+      margin-bottom: 20px;
+      display: block;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 55px;
+        height: 6px;
+        background-color: $red;
+        top: -15px;
+      }
+    }
+    &-text{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #999999;
+      display: block;
+    }
+    &:active{
+      color: #999999;
+    }
+  }
+}
+// end project
+
+// start smart
+
+.smart,
+.job{
+  background-color: $red;
+  min-height: 181px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0 45px;
+    &-text{
+      font-size: 48px;
+      line-height: 71px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #fff;
+      @include f700;
+      span{
+        display: block;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.02em;
+        color: #fff;
+        @include f700;
+        padding-top: 20px;
+      }
+    }
+    &-btn{
+      button{
+        @include f500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000;
+        letter-spacing: 0.05em;
+        padding: 14px 30px 14px 63px;
+        text-transform: uppercase;
+        position: relative;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        img{
+          padding-right: 15px;
+          position: absolute;
+          top: 18px;
+          left: 30px;
+        }
+      }
+    }
+  }
+}
+// end smart
+
+// start doing
+
+.doing{
+  &__title{
+    padding-top: 150px;
+    padding-bottom: 66px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+    padding-bottom: 150px;
+  }
+  &__item{
+    background-color: $grey;
+    width: 100%;
+    height: auto;
+    img{
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      padding-top: 60px;
+    }
+    &-text{
+      @include f500;
+      font-size: 21px;
+      line-height: 31px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #000000;
+      padding: 0px 70px 60px 60px;
+    }
+  }
+}
+
+// end doing
+
+// start portfolio
+
+.portfolio{
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    &-img{
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+  }
+}
+
+// end portfolio
+
+// start question
+
+.question{
+  &__title{
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  &__accordion{
+    margin-bottom: 150px;
+    &-title{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      text-transform: uppercase;
+      color: $red;
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      transition: 0.4s;
+      cursor: pointer;
+      &::before{
+        content: '\f0d7';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        left: 0;
+        transform: rotate(270deg);
+      }
+      &.active::before{
+        content: '\f0d7';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        left: 0;
+        transform: rotate(0deg);
+      }
+    }
+    &-text{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #999;
+      margin-bottom: 40px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+  }
+}
+
+// end question
+
+// start partners 
+
+.partners{
+  background-color: #404149;
+  &__title{
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  &__inner{
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-gap: 30px;
+    &-item{
+      text-align: center;
+    }
+  }
+}
+
+// end partners 
+
+// start reviews 
+
+.reviews{
+  &__title{
+    padding-top: 150px;
+    padding-bottom: 64px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+    padding-bottom: 150px;
+  }
+  &__item{
+    &-text{
+      background: $grey;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      color: #999;
+      padding: 80px 30px 38px 30px;
+      margin-bottom: 30px;
+      position: relative;
+      &::before{
+        content: '\f10d';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 35px;
+        top: 30px;
+      }
+    }
+    &-name{
+      font-size: 21px;
+      line-height: 31px;
+      letter-spacing: 0.02em;
+      @include f500;
+      color: #000;
+      span{
+        color: $red;
+      }
+    }
+  }
+}
+
+// end reviews 
+
+
+// start contact 
+
+.contact{
+  &__title{
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    grid-gap: 30px;
+    padding-bottom: 150px;
+  }
+  &__item{
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #999;
+    @include f500;
+    &-address{
+      position: relative;
+      padding-top: 70px;
+      &::before{
+        content: '\f041';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+      span{
+        display: block;
+        color: #000;
+        padding-top: 25px;
+      }
+    }
+    &-phone{
+      padding-top: 70px;
+      margin-bottom: 25px;
+      position: relative;
+      &::before{
+        content: '\f095';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+    }
+    &-tel{
+      display: block;
+      color: #000;
+    }
+    &-time{
+      padding-top: 70px;
+      position: relative;
+      &::before{
+        content: '\f017';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+      span{
+        display: block;
+        color: #000;
+        padding-top: 25px;
+      }
+    }
+    &-email{
+      padding-top: 70px;
+      position: relative;
+      &::before{
+        content: '\f0e0';
+        position: absolute;
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        color: $red;
+        font-size: 48px;
+        top: 0;
+        left: 0;
+        right: 0; 
+      }
+      a{
+        color: $red;
+        display: block;
+        padding-top: 25px;
+      }
+    }
+  }
+}
+
+// end contact 
+
+// start footer 
+
+.footer{
+  background-color: #404149;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 75px;
+    &-copy{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+      padding-right: 20px;
+    }
+    &-text{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+}
+
+// end footer 
+
+
+
+
+@import '_media';
+
+
+
